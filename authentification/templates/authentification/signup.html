@@ -1,0 +1,58 @@
+
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="{% static '/authentification/css/inscription.css' %}">
+    <meta name="viewport" content="width=device-width, initial-scale=!">
+    <title>Document</title>
+</head>
+<body>
+    <form action="" method="POST">
+        {% csrf_token %}
+        
+        <div class="form">
+            <h2>S'incrire</h2>
+
+            <div class="inputBox">
+                <label class="nom">username</label>
+                <input type="text" name="username" id="username">
+                <small></small>
+    
+            </div>
+            <div class="inputBox">
+                <label class=password>Password</label>
+                <input type="password" name="pwd" id="pwd">
+                <small></small>
+    
+            </div>
+    
+            <div class="inputBox">
+                <label class="nom">Adresse Mail</label>
+                <input type="email" name="mail" id="mail">
+                <small></small>
+    
+            </div>
+    
+            <div class="selection">
+                <label for="poste">Poste occupé(e) : </label>
+                <select name="posteoccup" id="">
+                    <option value="secret">DGA</option>
+                    <option value="secret">Secretaire</option>
+                    <option value="secret">Commerciel(e)</option>
+                    <option value="secret">Productrice</option>
+                    <option value="secret">Informaticien(ne)</option>
+                </select>
+            </div>
+            <br>
+            <button type="submit" style="margin-left: 50px ;" > <a href="{% url 'authentification:login' %}" style="color: white; text-decoration: none; font-size: 20px;"></a>S'inscrire</a></button>
+
+        </div>
+
+        
+    </form>
+</body>
+</html>

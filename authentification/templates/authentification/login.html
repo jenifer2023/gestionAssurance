@@ -1,0 +1,32 @@
+{% load static %}
+
+<html>
+    <head>
+        <link rel="stylesheet" href="{% static '/authentification/css/inscription.css' %}">
+        <title>authentification</title>
+    </head>
+    <body>
+        <div class="form">
+            <h2>Authentification</h2>
+            <p>{{ message }}</p>
+            <form method="post">
+                <div class="inputBox">
+                    {{ form.as_p }}
+                    {% csrf_token %}
+
+                </div>
+              
+                <button type="submit" style="align-items: center; margin-left: 50px ;">
+                    <a href="{% url 'données:index' %}" style="color: white; text-decoration: none; font-size: 18px;">
+                        Se connecter</a></button><br><br>
+
+                <div>
+                    <label for="fogot" style="margin: 10px;">Pas de compte?</label>
+                    <a href="{% url 'authentification:signup' %}">Cliquer ici</a>
+                </div>
+               
+            </form>
+        </div>
+       
+    </body>
+</html>

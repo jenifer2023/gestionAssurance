@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=!, initial-scale=1.0">
+    <link rel="stylesheet" href="authentification.css">
+
+    <title>test</title>
+</head>
+
+<body>
+    <form method="POST" action="/creation">
+        {% csrf_token %}
+
+        <div class="form">
+            <h2>authentification</h2>
+            <div class="inputBox">
+                <label class="nom">username</label>
+                <input type="text" name="username" id="username">
+                <small></small>
+    
+            </div>
+            <div class="inputBox">
+                <label class=password>Password</label>
+                <input type="text" name="pwd" id="pwd">
+                <small></small>
+    
+            </div>
+    
+            <div class="inputBox">
+                <label class="nom">Adresse Mail</label>
+                <input type="email" name="mail" id="mail">
+                <small></small>
+    
+            </div>
+    
+            <div class="selection">
+                <label for="poste">Poste occupé(e) : </label>
+                <select name="posteoccup" id="">
+                    <option value="secret">Secrétaire</option>
+                    <option value="secret">Productrice</option>
+                    <option value="secret">Commerciel(e)</option>
+                </select>
+            </div>
+            <div class="bouton">
+            <button type="submit"><a href="/authentification.html">Valider</a></button>
+            <!-- <button type="submit"><a href="/singup">Annuler</a></button> -->
+            <button onclick="secretaire.html">Annuler
+            </button>
+    
+            </div>
+            
+        </div>
+    </form>
+    
+</body>
+
+
+</html>
