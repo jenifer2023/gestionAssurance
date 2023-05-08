@@ -13,10 +13,7 @@ class LoginForm(forms.Form):
     )
     username = forms.CharField(max_length=63, label='Nom d’utilisateur ')
     password = forms.CharField(max_length=63, widget=forms.PasswordInput, label='Mot de passe ')
-    # email = models.CharField(max_length=63, null=False, label='Email : ')
-    # code = models.CharField(max_length=5, null=False, label='Code')
-    # poste = models.IntegerField(default=1, choices=choices, label='Poste occupé(e) : ' )
-    # tel = models.CharField(default=0, max_length=20, label='Tel : ')
+   
 
 
 class SignupForm(UserCreationForm):

@@ -1,0 +1,84 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=!, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static '/css/rapport.css' %}">
+    <title>rapport</title>
+</head>
+<body>
+    
+    
+   <div>
+    <div class="alle">
+        <div>
+            <h1>Direct<span>Insurance</span></h1>
+        </div>
+        <div class="liens">
+            <a href="secretaire.html">Fiche Présence</a>
+            <a href="rapport.html">Rapport</a>
+        </div>
+        <button>Se Deconnecté</button>
+    </div>
+    <div class="corps">
+        <h1>Rapport journalier</h1>
+        <input type="search" name="recherche" id="" placeholder="Rechercher....">
+        <div class="plus">
+            <h2>Historique des rapport</h2>
+            <div>
+            <button onclick="boite()">+</button>
+            <form action="" method="POST" enctype="multipart/form-data">
+                {% csrf_token %}
+            <diolog>
+                <div id="boite">
+                    <div>
+                        
+                        <p for="date">12/11/2023</p>
+                        <p for="motif">Ajouter le nimi rapport</p>
+                        {{ form.as_p }}
+                        <!-- <textarea name="text" id="libelle" name="libelle" cols="50" rows="10"></textarea> -->
+                        <button type="submit" ><a href="{% url 'données:rapport' %}" style="color: white; text-decoration: none; font-size: 20px;">Ajouter le mini rapport</a></button>
+                        <!-- <button onclick="soumettre(event)">Annuler le mini rapport</button> -->
+                    </div>
+                </div>
+            </diolog>
+        </form> 
+            </div>
+        </div>
+        <div class="contenu">
+            <label for="jour">12/02/2023 : </label>
+            <label for="jour">monsieur est venu vous chercher et il a demande une cotation de....</label>
+        </div>
+        <div class="contenu">
+            <label for="jour">12/02/2023 : </label>
+            <label for="jour">monsieur est venu vous chercher et il a demande une cotation de....</label>
+        </div>
+
+    </div>
+   </div> 
+
+
+   <script>
+    function boite(event){
+        reservation = document.getElementById("boite");
+        reservation.style.visibility = reservation.style.visibility =="visible" ? "hidden" : "visible"
+    
+    }
+
+    function soumettre(event){
+    let selection = document.querySelector("#selection")
+    let nombre = document.querySelector("#nombre")
+    if(nombre.value == ""|| nombre.value<=0){
+        alert("entrer un nombre positif")
+    }
+
+    reservation = document.getElementById("boite");
+        reservation.style.visibility = reservation.style.visibility =="visible" ? "hidden" : "visible"
+    }
+    </script>
+   
+</body>
+</html>
