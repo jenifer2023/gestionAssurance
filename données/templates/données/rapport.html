@@ -36,7 +36,7 @@
                 <div id="boite">
                     <div>
                         
-                        <p for="date">12/11/2023</p>
+                        <p for="date">{{ rapport.date }}</p>
                         <p for="motif">Ajouter le nimi rapport</p>
                         {{ form.as_p }}
                         <!-- <textarea name="text" id="libelle" name="libelle" cols="50" rows="10"></textarea> -->
@@ -48,10 +48,12 @@
         </form> 
             </div>
         </div>
+        {% for rapport in rapports %}
         <div class="contenu">
-            <label for="jour">12/02/2023 : </label>
-            <label for="jour">monsieur est venu vous chercher et il a demande une cotation de....</label>
+            <label for="jour">{{ rapport.date }} : </label>
+            <label for="jour">{{ rapport.libelle }}</label>
         </div>
+        {% endfor %}
         <div class="contenu">
             <label for="jour">12/02/2023 : </label>
             <label for="jour">monsieur est venu vous chercher et il a demande une cotation de....</label>

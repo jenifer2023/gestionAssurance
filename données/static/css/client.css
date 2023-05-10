@@ -1,0 +1,99 @@
+body{
+    background:rgb(242, 247, 250);
+   
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    
+    
+    }
+    
+    .forme{
+        background: white;
+        width: 400px;
+        height: 700px;
+        border-radius: 10px;
+        border: blue solid 2px;
+        padding: 30px 40px;
+        
+    }
+
+    .forme h2{
+        text-align: center;
+        margin-bottom: 20px;
+        font-weight: 600;
+        text-transform: uppercase;
+        text-decoration: underline;
+        color: black;
+        text-align: center;
+        text-decoration: underline;
+    
+    }
+    
+    .inputBox{
+        display: flex;
+        flex-direction:column ;
+        margin-bottom: 20px;
+        font-weight: bold;
+        font-size: 15px;
+        text-transform: capitalize;
+        color: black;
+       
+    }
+    
+    .inputBox input{
+        font-size: 18px;
+        border: solid 2px black;
+        border-radius: 5px;
+        padding: 5px;
+    }
+    
+    .bouton{
+        text-align: center;
+        margin-top: 30px;
+        margin-bottom: 20px;
+    }
+    
+    button{
+    
+        border: 1px solid  blue;
+        color: white;
+        width: 150px;
+        font-size: 15px;
+        border-radius: 30px;
+        padding: 10px 15px;
+        background-color:  blue;
+        font-weight: bold;
+        text-align: center;
+        transition: .4s;
+        margin-top: 10px;
+    }
+    
+    button:hover{
+        background-color: transparent;
+        cursor: pointer;
+        border: 2px solid black;
+        color: black;
+        font-weight: bold;
+    }
+    
+    .selection{
+        font-weight: bold;
+        font-size: 18px;
+        /* justify-content: space-between; */
+    
+    }
+    
+    .selection select{
+        font-weight: bold;
+        font-size: 18px;
+    
+    }
+    
+    
+    
+    
+    
+    
+    

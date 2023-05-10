@@ -1,0 +1,99 @@
+
+{% load static %}
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=!, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static '/css/presence.css' %}">
+
+    <title>test</title>
+</head>
+
+<body>
+
+    <form action="" method="POST" enctype="multipart/form-data"> 
+        {% csrf_token %}
+
+       
+
+    <div class="forme">
+        <h2>Création client</h2>
+        {{ form.as_p }}
+        <!-- <div class="inputBox">
+            <label class="nom">Nom/Raison sociale</label>
+            <input type="text" name="username" id="username">
+            <small></small>
+
+        </div> -->
+        <!-- <div class="inputBox">
+            <label class=password>Prénom</label>
+            <input type="text" name="prenom" id="prenom">
+            <small></small>
+
+        </div> -->
+
+        <!-- <div class="inputBox">
+            <label class="nom">Adresse</label>
+            <input type="adresse" name="adresse" id="adresse">
+            <small></small>
+
+        </div>
+
+        <div class="inputBox">
+            <label class="nom">Adresse</label>
+            <input type="email" name="mail" id="mail">
+            <small></small>
+
+        </div>
+
+        <div class="inputBox">
+            <label class="date">Date Naissance</label>
+            <input type="date" name="date_naiss" id="date_naiss">
+            <small></small>
+
+        </div>
+
+        <div class="inputBox">
+            <label class="tel">Téléphone</label>
+            <input type="number" name="tel" id="tel">
+            <small></small>
+
+        </div>
+
+        <div class="selection">
+            <label for="poste">Type d'assurance : </label>
+            <input type="checkbox" name="type" id="">
+            <label for="">Auto</label>
+            <input type="checkbox" name="type" id="">
+            <label for="">Maladie</label><br><br>
+            <input type="checkbox" name="type" id="">
+            <label for="">Voyage</label>
+            <input type="checkbox" name="" id="">
+            <label for="">Caution</label>
+            <input type="checkbox" name="" id="">
+            <label for="">Responsabilité</label><br><br>
+             
+            <label for="">Autre type d'assurance : </label>
+            <textarea name="autre" id="autre" cols="50" rows="3"></textarea>
+        </div>     -->
+
+        
+        <div class="bouton">
+        <button type="submit"><a href="{% url 'données:rapport' %}" style="color: white; text-decoration: none; font-size: 20px;">Valider</a></button>
+        <button onclick="secretaire.html">Annuler
+        </button>
+
+        </div>
+        
+    </div>
+
+</form>
+</body>
+
+
+</html>

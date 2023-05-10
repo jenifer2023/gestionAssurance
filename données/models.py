@@ -14,18 +14,20 @@ class Client(models.Model):
 
 
     choices = (
-    (0, 'Auto'),
-    (1, 'voyage'),
-    (2, 'Maladie'),
-    (3, 'Tout risque'),
-    (4, 'Caution'),
+    ('auto', 'Auto'),
+    ('voyage', 'voyage'),
+    ('Maladie', 'Maladie'),
+    ('Tout risque', 'Tout risque'),
+    ('Caution', 'Caution'),
     )
     nom = models.CharField(max_length=200, null=False)
     prenom = models.CharField(max_length=200, null=False)
     adresse = models.CharField(max_length=200, null=False)
+    email = models.CharField(max_length=200, null=False, )
     date_naiss = models.DateField()
     tel = models.CharField(default=0, max_length=200)
-    typeAssur = models.IntegerField(default=0, choices=choices )
+    typeAssur = models.CharField(null= False, max_length=200, choices=choices )
+    autre = models.TextField(null=True)
     created_at =models.DateTimeField(auto_now_add=True)
     updated_at =models.DateTimeField(auto_now=True)
 
